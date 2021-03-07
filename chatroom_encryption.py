@@ -16,7 +16,7 @@ def register():
     else:
         reg_completion = False
 
-    with open('../chatroom/register_login_info.txt', 'r') as register_r:
+    with open('#incert .txt-file-name-here#', 'r') as register_r:
         for line in register_r:
             user_info_list = line.split()
             if len(user_info_list) > 0:
@@ -46,7 +46,7 @@ def register():
                 return register()
             else:
                 reg_completion = True
-        with open('../chatroom/register_login_info.txt', 'a') as register_r:
+        with open('#incert .txt-file-name-here#', 'a') as register_r:
             password_r, access_key2 =  encryption_function_for_chatroom.password_encryption(password_r)
             print(f'Your login-info access-key is: {access_key2}')
             register_r.write(f'{username_r} {password_r}\n')
@@ -62,7 +62,7 @@ def login():
             print("Username or password is incorrect.")
             return access
 
-    with open('../chatroom/register_login_info.txt', 'r') as login_info:
+    with open('#incert .txt-file-name-here#', 'r') as login_info:
         for line in login_info:
 
             login_info_list = line.split()
@@ -94,7 +94,7 @@ def get_login_info():
         return get_login_info()
 
 
-    with open('../chatroom/register_login_info.txt', 'r') as login_info:
+    with open('#incert .txt-file-name-here#', 'r') as login_info:
         for line in login_info:
             login_info_list = line.split()
             if len(login_info_list) > 0:
