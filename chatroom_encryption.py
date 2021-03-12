@@ -1,4 +1,4 @@
-from Projects.chatroom_encrypted import encryption_function_for_chatroom
+# import encyption_function_for_chatroom.py from whatever directery you have it stored
 
 
 def register():
